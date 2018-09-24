@@ -4,7 +4,11 @@ void setup()
 }
 void draw()
 {
-	//your code here
+	Die bob = new Die(100, 100);
+  bob.show();
+  
+  
+  
 }
 void mousePressed()
 {
