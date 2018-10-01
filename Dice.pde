@@ -28,17 +28,22 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		if(myRoll == 1)
-    {
+		if(myRoll == 1) {
       mySpace = 40;
-    } else (myRoll == 2)
-    {
+    } else if (myRoll == 2) {
       mySpace = 20;
-    } else (myRoll == 3)
-    
+    } else if (myRoll == 3){
+      mySpace = 10;
+    } else if (myRoll == 4){
+      mySpace = 10;
+    } else if (myRoll == 5){
+      mySpace = 10;
+    } else {
+      mySpace = 10;
+    }
   }
       
-	}
+	
 	void show()
 	{
     fill(255);
@@ -48,5 +53,6 @@ class Die //models one single dice cube
     {
       ellipse(myX + mySpace, myY + mySpace, 10, 10);
     }
+    System.out.println(myRoll);
 	}
 }
