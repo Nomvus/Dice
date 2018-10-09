@@ -5,13 +5,28 @@ void setup()
 }
 void draw()
 {
-	Die bob = new Die(100, 100);
-  bob.show();
-
+  background(51);
+	Die bob1 = new Die(100, 100);
+  bob1.show();
+  Die bob2 = new Die(200, 100);
+  bob2.show();
+  Die bob3 = new Die(300, 100);
+  bob3.show();
+  Die bob4 = new Die(100, 200);
+  bob4.show();
+  Die bob5 = new Die(200, 200);
+  bob5.show();
+  Die bob6 = new Die(300, 200);
+  bob6.show();
+  int totalDots = bob1.myRoll + bob2.myRoll + bob3.myRoll + bob4.myRoll + bob5.myRoll + bob6.myRoll;
+  textSize(32);
+  text("Number of dots: " + totalDots, 100, 450);
 }
 void mousePressed()
 {
+
 	redraw();
+
 }
 class Die //models one single dice cube
 {
@@ -24,11 +39,7 @@ class Die //models one single dice cube
     myRoll = (int)(Math.random()*6)+1;
 		//variable initializations here
 	}
-	void roll()
-	{
-		
-  }
-      
+   
 	
 	void show()
 	{
@@ -40,55 +51,49 @@ class Die //models one single dice cube
         fill(255);
         rect(myX, myY, 80, 80);
         fill(0);
-        ellipse(140, 140, 10, 10);
+        ellipse(myX + 40, myY + 40, 10, 10);
     } else if (myRoll == 2) {
         fill(255);
         rect(myX, myY, 80, 80);
         fill(0);
-        ellipse(110, 110, 10, 10);
-        ellipse(170, 170, 10, 10);
+        ellipse(myX + 10, myY + 10, 10, 10);
+        ellipse(myX + 70, myY + 70, 10, 10);
     } else if (myRoll == 3){
         fill(255);
         rect(myX, myY, 80, 80);
         fill(0);
-        ellipse(110, 110, 10, 10);
-        ellipse(170, 170, 10, 10);
-        ellipse(140, 140, 10, 10);
+        ellipse(myX + 10, myY + 10, 10, 10);
+        ellipse(myX + 70, myY + 70, 10, 10);
+        ellipse(myX + 40, myY + 40, 10, 10);
     } else if (myRoll == 4){
         fill(255);
         rect(myX, myY, 80, 80);
         fill(0);
-        ellipse(110, 110, 10, 10);
-        ellipse(110, 170, 10, 10);
-        ellipse(170, 110, 10, 10);
-        ellipse(170, 170, 10, 10);
+        ellipse(myX + 10, myY + 10, 10, 10);
+        ellipse(myX + 10, myY + 70, 10, 10);
+        ellipse(myX + 70, myY + 10, 10, 10);
+        ellipse(myX + 70, myY + 70, 10, 10);
     } else if (myRoll == 5){
         fill(255);
         rect(myX, myY, 80, 80);
         fill(0);
-        ellipse(110, 110, 10, 10);
-        ellipse(110, 170, 10, 10);
-        ellipse(170, 110, 10, 10);
-        ellipse(170, 170, 10, 10);
-        ellipse(140, 140, 10, 10);
+        ellipse(myX + 10, myY + 10, 10, 10);
+        ellipse(myX + 10, myY + 70, 10, 10);
+        ellipse(myX + 70, myY + 10, 10, 10);
+        ellipse(myX + 70, myY + 70, 10, 10);
+        ellipse(myX + 40, myY + 40, 10, 10);
     } else {
         fill(255);
         rect(myX, myY, 80, 80);
         fill(0);
-        ellipse(110, 110, 10, 10);
-        ellipse(110, 170, 10, 10);
-        ellipse(170, 110, 10, 10);
-        ellipse(170, 170, 10, 10);
-        ellipse(140, 110, 10, 10);
-        ellipse(140, 170, 10, 10);
+        ellipse(myX + 10, myY + 10, 10, 10);
+        ellipse(myX + 10, myY + 70, 10, 10);
+        ellipse(myX + 70, myY + 10, 10, 10);
+        ellipse(myX + 70, myY + 70, 10, 10);
+        ellipse(myX + 40, myY + 10, 10, 10);
+        ellipse(myX + 40, myY + 70, 10, 10);
     }
     
-    /*for(int num = 0; num <= myRoll; num++)
-    {
-      ellipse(myX + mySpace, myY + mySpace, 10, 10);
-    }
-    */
-    System.out.println(myRoll);
     
 	}
 }
