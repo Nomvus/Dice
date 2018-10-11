@@ -18,7 +18,13 @@ void draw()
   bob5.show();
   Die bob6 = new Die(300, 200);
   bob6.show();
-  int totalDots = bob1.myRoll + bob2.myRoll + bob3.myRoll + bob4.myRoll + bob5.myRoll + bob6.myRoll;
+  Die bob7 = new Die(100, 300);
+  bob7.show();
+  Die bob8 = new Die(200, 300);
+  bob8.show();
+  Die bob9 = new Die(300, 300);
+  bob9.show();
+  int totalDots = bob1.myRoll + bob2.myRoll + bob3.myRoll + bob4.myRoll + bob5.myRoll + bob6.myRoll + bob7.myRoll + bob8.myRoll + bob9.myRoll;
   textSize(32);
   text("Number of dots: " + totalDots, 100, 450);
 }
